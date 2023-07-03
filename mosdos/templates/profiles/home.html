@@ -1,0 +1,35 @@
+{% extends 'client_base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="col-md-10 mt-1 px-1">
+	<div class="container-fluid">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="row">
+				<div class="card shadow-lg pt-2 pb-2">
+					{% if basic_info.hebrew_first_name %}
+					<h3>Basic Information</h3>
+					<div class="col-md-12 opacity-50">
+						<hr>
+					</div>
+					<p><span class="fw-semibold">Hebrew Name: {{ basic_info.hebrew_first_name }} {{ basic_info.hebrew_last_name }}</span>
+						<span style="margin-left:25px"><span class="fw-semibold">Address:</span> {{ basic_info.address }}</span>
+						<span style="margin-left:25px"><span class="fw-semibold">Father Occupation:</span>{{ basic_info.father_occupation }}</span>
+						<span style="margin-left:25px"><span class="fw-semibold">Mother Occupation:</span>{{ basic_info.mother_occupation }}</span>
+					</p>
+					{% else %}
+					<form class="row" id="id_basic_information_form" method="post" >
+						{% csrf_token %}
+						{% include 'forms/basicinformation.html' %}
+						{% include 'forms/phone_information.html' %}
+						{% include 'forms/email_information.html' %}
+					<div class="col-md-12 mb-2 d-flex justify-content-end">
+							<button class="btn btn-success" type="button" id="id_basic_information_save">Save Info</button>
+						</div>
+					</form>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

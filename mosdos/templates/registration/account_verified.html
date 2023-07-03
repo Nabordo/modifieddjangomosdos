@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-md-12 mt-3 d-flex justify-content-center">
+    <div class="card p-3">
+      <div class="row">
+        <h2>Account Verified</h2>
+        <p>Your account has been successfully verified. You can now login and access your account.</p>
+        <a href="{% url 'login' %}">Login</a>
+      </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Verification Page{% endblock %}
+{% block content %}
+ {% if not request.user.is_authenticated %}
+    <script>
+        window.location.href = "{% url 'login' %}";
+    </script>
+{% endif %}
+    <div class="col-md-12 mt-3 d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Hello {{ user.username }},</p>
+                        <p>Thank you for registering. Please click the link below to verify your account:</p>
+                        <p><a href="http://{{ domain }}/verify/{{ uid }}/{{ token }}">Verify your account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

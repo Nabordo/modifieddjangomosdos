@@ -1,0 +1,16 @@
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+ul{
+    Display: none;
+}
+/* Additional styles to adjust input field width */
+input[type="password"] {
+    padding-right: 30px;
+    }
+body {
+      direction: rtl; /* Set the default direction of the whole page to right-to-left */
+    }

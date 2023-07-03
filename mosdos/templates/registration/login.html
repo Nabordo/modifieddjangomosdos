@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div class="col-md-12 mt-3 d-flex justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3">
+            <div class="row">
+                <div class="col-md-12 mt-2">
+                    <form class="text-center" method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+	                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                        <input class="form-control mb-3 text-center" placeholder="Email" type="text" id="id_email" name="email">
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control text-center" id="id_password" name="password" placeholder="password">
+                            <button class="btn btn-light" type="button" id="button-addon2"><span><i class="toggle-password fa fa-eye"></i></span></button>
+                        </div>
+                        <input class="btn btn-success w-75" type="submit" value="Login">
+                    </form>
+                    <hr>
+                    <div class="col-md-12 text-center">
+						<p><a href="{% url 'password_reset' %}">Forgot Password?</a></p>
+                        <a href="{% url 'signup' %}" class="btn btn-primary btn-sm w-75">Signup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
