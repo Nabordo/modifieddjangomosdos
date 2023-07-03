@@ -1,0 +1,21 @@
+<div class="col-md-12 mb-2 fs-3">
+	Email Information
+</div>
+<div class="row">
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ email_form_father.uid.html_name }}" id="id_uid_father" value="{{user.id}}" type="text" required>
+	<input class="form-control hidden" name="{{ email_form_father.email_user.html_name }}" id="id_email_user_father"  type="text" value="Father">
+	<input class="form-control" name="{{ email_form_father.email_information.html_name }}" id="id_email_information_father"  type="email" placeholder="Father Email"  required>
+	<div class="invalid-feedback">
+		Enter father email if none put N/A
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ email_form_mother.uid.html_name }}" id="id_uid_mother" value="{{user.id}}" type="text" required>
+	<input class="form-control hidden" name="{{ email_form_mother.email_user.html_name }}" id="id_email_user_mother"  type="text" value="Mother">
+	<input class="form-control" name="{{ email_form_mother.email_information.html_name }}" id="id_email_information_mother"  type="email" placeholder="Mother Email"  required>
+	<div class="invalid-feedback">
+		Enter mother email if none put N/A
+	</div>
+</div>
+</div>

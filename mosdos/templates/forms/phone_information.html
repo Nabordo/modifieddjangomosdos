@@ -1,0 +1,29 @@
+<div class="col-md-12 mb-2 fs-3">
+	Phone & Mobile Information
+</div>
+<div class="row">
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ phone_form.uid.html_name }}" id="id_uid" value="{{user.id}}" type="text" required>
+	<input class="form-control hidden" name="{{ phone_form.phone_user.html_name }}" id="id_phone_user"  type="text" value="Home Phone">
+	<input class="form-control" name="{{ phone_form.phone_information.html_name }}" id="id_phone_information"  type="tel" pattern="[0-9]{10,}" placeholder="Home phone" minlength="10" required>
+	<div class="invalid-feedback">
+		Phone number must be 10 - 11 digit number without special character following this format 123456789
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ phone_father.uid.html_name }}" id="id_uid_father" value="{{user.id}}" type="text" required>
+	<input class="form-control hidden" name="{{ phone_father.phone_user.html_name }}" id="id_phone_user_father"  type="text" value="Father">
+	<input class="form-control" name="{{ phone_father.phone_information.html_name }}" id="id_phone_information_father"  type="tel" pattern="[0-9]{10,}" placeholder="Father Mobile" minlength="10" required>
+	<div class="invalid-feedback">
+		Phone number must be 10 - 11 digit number without special character following this format 123456789
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ phone_mother.uid.html_name }}" id="id_uid_mother" value="{{user.id}}" type="text" required>
+	<input class="form-control hidden" name="{{ phone_mother.phone_user.html_name }}" id="id_phone_user_mother"  type="text" value="Mother">
+	<input class="form-control" name="{{ phone_mother.phone_information.html_name }}" id="id_phone_information_mother"  type="tel" pattern="[0-9]{10,}" placeholder="Mother Mobile" minlength="10" required>
+	<div class="invalid-feedback">
+		Phone number must be 10 - 11 digit number without special character following this format 123456789
+	</div>
+</div>
+</div>

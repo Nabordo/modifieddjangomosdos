@@ -1,0 +1,49 @@
+<div class="col-md-12 mb-2 fs-3">
+	Profile Information
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control hidden" name="{{ form.uid.html_name }}" id="id_uid"
+	       value="{{user.id}}" type="text" placeholder="Postal" minlength="3" required>
+	<input class="form-control hidden" name="{{ form.contact_method.html_name }}"
+	       id="id_contact_method" value="Email" type="text" placeholder="Postal" minlength="3"
+	       required>
+	<input class="form-control" name="{{ form.hebrew_first_name.html_name }}"
+	       id="id_hebrew_first_name" type="text" placeholder="שם פרטי" minlength="3"
+	       pattern="^[\u0590-\u05FF\u0021-\u002F\u003A-\u0040\u005B    -\u0060\u007B-\u007E\s]+$"
+	       required>
+	<div class="invalid-feedback">
+		Use hebrew character only.
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control" name="{{ form.hebrew_last_name.html_name }}"
+	       id="id_hebrew_last_name" type="text" placeholder="שם פרטי" minlength="3"
+	       pattern="^[\u0590-\u05FF\u0021-\u002F\u003A-\u0040\u005B    -\u0060\u007B-\u007E\s]+$"
+	       required>
+	<div class="invalid-feedback">
+		Use hebrew character only.
+	</div>
+</div>
+<div class="col-md-4 mb-2">
+	<input class="form-control" name="{{ form.address.html_name }}" id="id_address" type="text"
+	       placeholder="Complete Address" minlength="3" required>
+	<div class="invalid-feedback">
+		Enter your complete address
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control" name="{{ form.father_occupation.html_name }}"
+	       id="id_father_occupation" type="text" placeholder="Father Occupation" minlength="3"
+	       required>
+	<div class="invalid-feedback">
+		Enter father's occupation or type None
+	</div>
+</div>
+<div class="col-md-2 mb-2">
+	<input class="form-control" name="{{ form.mother_occupation.html_name }}"
+	       id="mother_occupation" type="text" placeholder="Mother Occupation" minlength="3"
+	       required>
+	<div class="invalid-feedback">
+		Enter mother's occupation or type None
+	</div>
+</div>
